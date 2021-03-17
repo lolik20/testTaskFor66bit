@@ -1,0 +1,60 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>FUT MANAGER</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" type="text/css" href="../css/players.css">
+
+</head>
+<body>
+
+	<table style="background: #d6abab;border-radius:3px;" class="team_table" id="team_table">
+		<thead><tr><th>Name</th><th>Surname</th><th>Gender</th><th>Birthday</th><th>Team</th><th>Country</th><th></th></tr></thead>
+		<tbody class="players" id="players"></tbody>
+	</table>
+
+	<form name="editForm">
+		<input type="hidden" name="team" value="0"/>
+		<input style="text-align:center;" type="hidden" name="id" value="0" id="input"/>
+		<label for="Name">Имя</label>
+		<input style="margin-top:10px" name="Name" />
+		<br />
+		<label for="SecondName">Фамилия</label>
+		<input style="margin-top:10px" name="SecondName" />
+		<br />
+
+		<label for="Gender" style="">Пол</label>
+		<input style="display:none;margin-top:10px;" id="genderInput" class="Male">
+
+		<select class="genderSelect" id="genderSelect" onchange="genderSelect();" name="Gender" form="addForm">
+			<option disabled>Выберите пол</option>
+
+			<option value="Male" class="Male" selected>Male</option>
+			<option value="Female" class="Female">Female</option>
+		</select>
+		<br />
+		<label for="dd">День</label>
+		<input style="margin-top:10px;width:45px!important" name="dd" type="number" value="1" />
+		<label for="mm">Месяц</label>
+		<input style="margin-top:10px;width:45px!important" name="mm" type="number" value="1" />
+		<label for="yyyy">Год</label>
+		<input style="margin-top:10px;width:60px" name="yyyy" type="number" value="1970" />
+		<br />
+
+		
+		<button style="padding:3px;background:greenyellow;border-radius:5px;text-align:center;font-size:20px;margin-top:70px;" type="submit">Сохранить</button>
+		<br />
+
+	</form>
+	<button onclick="GoUrl('./index.html');" style="padding:3px;margin-right:200px;margin-top:70px;background:greenyellow;border-radius:5px;text-align:center;font-size:20px;"> <-Добавить игрока</button>
+
+
+	<script src="../js/listPlayers.js"></script>
+	<script src="../js/editPlayer.js"></script>
+</body>
+</html>

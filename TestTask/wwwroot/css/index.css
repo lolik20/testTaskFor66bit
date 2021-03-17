@@ -1,0 +1,24 @@
+﻿label {
+	font-size: 25px;
+}
+
+select {
+	height: 30px;
+	font-size: 17px;
+}
+
+body {
+	font-family: Arial;
+}
+
+input {
+	width: 100%;
+	padding: 4px 0 4px 0;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: #e0e0e0;
+	outline: none;
+	transition: 0.3s;
+	margin-top: 20px;
+	font-size: 20px;
+}

@@ -1,0 +1,67 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>FUT MANAGER</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+
+<body>
+
+	<h1 style="text-align:center;font-family:Arial;">Добавление Футболиста</h1>
+	<form name="addForm">
+
+		<input style="text-align:center;" type="hidden" name="id" value="0" />
+		<label for="Name">Имя</label>
+		<input style="margin-top:10px" name="Name" />
+		<br />
+		<label for="SecondName">Фамилия</label>
+		<input style="margin-top:10px" name="SecondName" />
+		<br />
+
+		<label for="Gender" style="">Пол</label>
+		<input style="display:none;margin-top:10px;" id="genderInput" class="Male">
+
+		<select class="genderSelect" id="genderSelect" onchange="genderSelect();" name="Gender" form="addForm">
+			<option disabled>Выберите пол</option>
+
+			<option value="Male" class="Male" selected>Male</option>
+			<option value="Female" class="Female">Female</option>
+		</select>
+		<br />
+		<label for="dd">День</label>
+		<input style="margin-top:10px;width:45px!important" name="dd" type="number" value="1" />
+		<label for="mm">Месяц</label>
+		<input style="margin-top:10px;width:45px!important" name="mm" type="number" value="1" />
+		<label for="yyyy">Год</label>
+		<input style="margin-top:10px;width:60px" name="yyyy" type="number" value="1970" />
+		<br />
+		<label for="TeamId">Страна</label>
+		<input style="display:none;" id="countryInput" name="countryInput" class="Russia" />
+
+		<select id="countrySelect" onclick="countrySelect();" name="Team" form="addForm">
+			<option disabled>Выберите страну</option>
+			<option value="Russia" class="Russia" selected>Russia</option>
+			<option value="USA" class="USA">USA</option>
+			<option value="Italy" class="Italy">Italy</option>
+		</select>
+		<br />
+		<label for="teamInput">Команда</label>
+		<input style="width:500px;" class="" id="teamInput" name="teamInput" />
+		<select id="teamSelect" onclick="teamSelect();" name="teamSelect" form="addForm">
+			<option disabled>Выберите команду</option>
+		</select>
+		<button style="padding:3px;background:greenyellow;border-radius:5px;text-align:center;font-size:20px;" type="submit">Сохранить</button>
+		<button onclick="GoUrl('./players.html');" style="padding:3px;margin-left:400px;background:greenyellow;border-radius:5px;text-align:center;font-size:20px;">Игроки-></button>
+
+	</form>
+
+	<script src="../js/addPlayer.js"></script>
+</body>
+</html>
